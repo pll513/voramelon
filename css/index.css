@@ -1,0 +1,76 @@
+.logo-wrap {
+  float: left;
+  padding: 10px;
+}
+.logo {
+  height: 40px;
+  line-height: 40px;
+}
+.nav {
+  float: left;
+}
+.sec-banner {
+  height: 400px;
+  background: #aaa;
+  text-align: center;
+}
+.searchbar-wrap {
+  text-align: center;
+  height: 40px;
+}
+.searchbar {
+  display: inline-block;
+}
+.sec-overview {
+  text-align: center;
+}
+.foot {
+  text-align: center;
+}
+.icon-contact {
+  font-family: FontAwesome, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+}
+.icon-contact.qq:after {
+  content: "\f1d6";
+}
+.icon-contact.wechat:after {
+  content: "\f1d7";
+}
+.icon-contact.weibo:after {
+  content: "\f18a";
+}
+.foot-nav {
+  font-size: 0;
+  -webkit-text-size-adjust: none;
+}
+.foot-nav > a {
+  margin: 0 20px;
+  display: inline-block;
+  font-size: 16px;
+}
+.cp-rt {
+  font-size: 14px;
+  text-align: center;
+}
+/*
+ ** intro-block
+ */
+.intro-block {
+  text-align: center;
+}
+.intro-block_icon:after {
+  font-family: FontAwesome, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+}
+.intro-block_icon.i-blog:after {
+  content: "\f0f6";
+}
+.intro-block_icon.i-game:after {
+  content: "\f11b";
+}
+.intro-block_icon.i-image:after {
+  content: "\f03e";
+}
