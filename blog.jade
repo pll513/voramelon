@@ -7,36 +7,152 @@ head
   link(rel="stylesheet" type="text/css" href="css/blog.css")
 body
 header.head.clearfix
-  nav.nav
-    ul.navbar
-      li
-        a BLOG
-      li
-        a GAME
-      li
-        a IMAGE
-      li
-        a OTHER
-  .logo-wrap
-    .logo VORAMELON
-  .searchbar-wrap
-    form.searchbar
-      input.searchbar_input(type="text" placeholder="my placeholder")
-      input.searchbar_btn(type="submit" value="SEARCH")
+  .head-top.clearfix
+    .container
+      .row
+        .logo-wrap
+          a.logo VORAMELON
+        nav.nav
+          ul.navbar
+            li
+              a 博客
+            li
+              a 游戏
+            li
+              a 图
+            li
+              a 其他
+  .head-middle.clearfix
+    .container
+      .row.pv3
+        .l-4
+          .h-blog-wrap
+            .center-wrap
+            .h-blog
+              h2.h-blog-title 博客
+              p.h-blog-desc 描述描述描述即大家诶简单记得叫几
+        .l-4.l-offset-4
+          .searchbar-wrap
+            .center-wrap
+            form.searchbar
+              input.searchbar_input(type="text" placeholder="my placeholder")
+              input.searchbar_btn(type="submit" value="SEARCH")
+
 section.sec-blog
-  h2 博客
   .container
+    .blog-category
+      a(href="#") 电影
+      a(href="#") 前端
+      a(href="#") 数学
+      a(href="#") 游戏
+      a(href="#") 音乐
+      a(href="#") 其他
+    .row
+      .l-12.sec-overview
+        .blog-group
+          header.blog-group_head
+            h2.blog-group_title 推荐
+            .blog-group_title-divider
+            p.blog-group_title-desc 描述描述描述即大家诶简单记得叫几决定将阿胶的
+          main.blog-group_main.row
+            .l-7.row.p0
+              .l-12.row
+                .l-12.p0.pb2
+                  .blog-item-vt-large
+                    .blog-item-vt_img-wrap
+                      img.blog-item-vt_img(src="images/at-the-doorstep-to-the-world-2-1141359-639x423.jpg" alt)
+                    .blog-item-vt_text
+                      .blog-item-category 电影影评
+                      h4.blog-item-title 文章标题文章标题
+                      .blog-item-desc 描述啊基督教大街哦诶阿胶得哦啊叫极度诶将诶德基家居服金蝶节哀撇脚将诶大家大家诶旧爱间谍啊叫哦的描述啊基督教大街哦诶阿胶得哦啊叫极度诶将诶德基家居服金蝶节哀撇脚将诶大家大家诶旧爱间谍啊叫哦的
+                      .blog-item-vt_info
+                        .blog-item-vt_time 2016-10-10
+                        .blog-item-vt_author 峰回路转
+                        .blog-item-vt_like 58
+                        .blog-item-vt_comment 17
+                .l-6.p0.pr1
+                  .blog-item-vt
+                    .blog-item-vt_cover
+                      .blog-item-vt_cover-text 进入
+                      .blog-item-info
+                        .blog-item-info_like 58
+                        .blog-item-info_star 2
+                        .blog-item-info_comment 17
+                    .blog-item-vt_img-wrap
+                      img.blog-item-vt_img(src="images/capturing-the-sun-1630684-639x426.jpg" alt)
+                    .blog-item-vt_text
+                      .blog-item-category 电影影评
+                      h4.blog-item-title 文章标题文章标题
+                      .blog-item-vt_info
+                        .blog-item-vt_time 2016-10-10
+                        .blog-item-vt_author 峰回路转
+                        .blog-item-vt_like 58
+                        .blog-item-vt_comment 17
+                .l-6.p0.pl1
+                  .blog-item-vt
+                    .blog-item-vt_cover
+                      .blog-item-vt_cover-text 进入
+                      .blog-item-info
+                        .blog-item-info_like 58
+                        .blog-item-info_star 2
+                        .blog-item-info_comment 17
+                    .blog-item-vt_img-wrap
+                      img.blog-item-vt_img(src="images/clock-face-1631303-639x426.jpg" alt)
+                    .blog-item-vt_text
+                      .blog-item-category 电影影评
+                      h4.blog-item-title 文章标题文章标题
+                      .blog-item-vt_info
+                        .blog-item-vt_time 2016-10-10
+                        .blog-item-vt_author 峰回路转
+                        .blog-item-vt_like 58
+                        .blog-item-vt_comment 17
+
+            .l-5
+              .blog-item-hz
+                .blog-item-hz_img-wrap
+                  img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
+                .blog-item-hz_text
+                  .blog-item-category 前端开发
+                  h4.blog-item-title 主题主题主题主题
+              .blog-item-hz
+                .blog-item-hz_img-wrap
+                  img.blog-item-hz_img(src="images/animales-acuaticos-1633555-640x360.jpg" alt)
+                .blog-item-hz_text
+                  .blog-item-category 前端开发
+                  h4.blog-item-title 主题主题主题主题
+              .blog-item-hz
+                .blog-item-hz_img-wrap
+                  img.blog-item-hz_img(src="images/seastar-1630263-640x360.jpg" alt)
+                .blog-item-hz_text
+                  .blog-item-category 前端开发
+                  h4.blog-item-title 主题主题主题主题
+              .blog-item-hz
+                .blog-item-hz_img-wrap
+                  img.blog-item-hz_img(src="images/philadelphia-at-night-1635022-639x426.jpg" alt)
+                .blog-item-hz_text
+                  .blog-item-category 前端开发
+                  h4.blog-item-title 主题主题主题主题
+              .blog-item-hz-large
+                .blog-item-hz_img-wrap
+                  img.blog-item-hz_img(src="images/keyboard-1615144-639x958.jpg" alt)
+                .blog-item-hz_text
+                  .blog-item-category 前端开发
+                  h4.blog-item-title 主题主题主题主题
+
+
     .row
       .l-12.sec-recommend
         .blog-group
           header.blog-group_head
-            h2 推荐
+            h2.blog-group_title 推荐
+            .blog-group_title-divider
+            p.blog-group_title-desc 描述描述描述即大家诶简单记得叫几决定将阿胶的
           main.blog-group_main.row
             .l-3.blog-item-wrap
               .blog-item
                 img.blog-item_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
                 .blog-item_cover
-                  h4.blog-item_title 主题主题主题主题
+                  h4.blog-item-title 主题主题主题主题
                   .blog-item-info
                     .blog-item-info_like 58
                     .blog-item-info_star 2
@@ -45,7 +161,7 @@ section.sec-blog
               .blog-item
                 img.blog-item_img(src="images/business-finance-money-1632103-639x459.jpg" alt)
                 .blog-item_cover
-                  h4.blog-item_title 主题主题主题主题
+                  h4.blog-item-title 主题主题主题主题
                   .blog-item-info
                     .blog-item-info_like 58
                     .blog-item-info_star 2
@@ -54,7 +170,7 @@ section.sec-blog
               .blog-item
                 img.blog-item_img(src="images/calculator-close-up-1630074-639x469.jpg" alt)
                 .blog-item_cover
-                  h4.blog-item_title 主题主题主题主题
+                  h4.blog-item-title 主题主题主题主题
                   .blog-item-info
                     .blog-item-info_like 58
                     .blog-item-info_star 2
@@ -63,7 +179,7 @@ section.sec-blog
               .blog-item
                 img.blog-item_img(src="images/painted-wall-of-timber-in-sunlight-1631474-639x426.jpg" alt)
                 .blog-item_cover
-                  h4.blog-item_title 主题主题主题主题
+                  h4.blog-item-title 主题主题主题主题
                   .blog-item-info
                     .blog-item-info_like 58
                     .blog-item-info_star 2
@@ -73,37 +189,41 @@ section.sec-blog
       .l-3.sec-blog-left
         .blog-group.sec-latest
           header.blog-group_head
-            h2 推荐
+            h2.blog-group_title 推荐
+            .blog-group_title-divider
+            p.blog-group_title-desc 描述描述描述即大家诶简单记得叫几决定将阿胶的
           main.blog-group_main
           .blog-item-hz
             .blog-item-hz_img-wrap
               img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
             .blog-item-hz_text
-              h4.blog-item-hz_title 主题主题主题主题
               .blog-item-category 前端开发
+              h4.blog-item-title 主题主题主题主题
           .blog-item-hz
             .blog-item-hz_img-wrap
               img.blog-item-hz_img(src="images/animales-acuaticos-1633555-640x360.jpg" alt)
             .blog-item-hz_text
-              h4.blog-item-hz_title 主题主题主题主题
               .blog-item-category 前端开发
+              h4.blog-item-title 主题主题主题主题
           .blog-item-hz
             .blog-item-hz_img-wrap
               img.blog-item-hz_img(src="images/seastar-1630263-640x360.jpg" alt)
             .blog-item-hz_text
-              h4.blog-item-hz_title 主题主题主题主题
               .blog-item-category 前端开发
+              h4.blog-item-title 主题主题主题主题
           .blog-item-hz
             .blog-item-hz_img-wrap
-              img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
+              img.blog-item-hz_img(src="images/philadelphia-at-night-1635022-639x426.jpg" alt)
             .blog-item-hz_text
-              h4.blog-item-hz_title 主题主题主题主题
               .blog-item-category 前端开发
+              h4.blog-item-title 主题主题主题主题
 
       .l-9.sec-blog-right
         .blog-group
           header.blog-group_head
-            h2 推荐
+            h2.blog-group_title 推荐
+            .blog-group_title-divider
+            p.blog-group_title-desc 描述描述描述即大家诶简单记得叫几决定将阿胶的
           main.blog-group_main.row
             .l-4.blog-item-wrap
               .blog-item-vt
@@ -116,8 +236,8 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/at-the-doorstep-to-the-world-2-1141359-639x423.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
@@ -134,8 +254,8 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/capturing-the-sun-1630684-639x426.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
@@ -152,8 +272,8 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/clock-face-1631303-639x426.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
@@ -170,8 +290,8 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/at-the-doorstep-to-the-world-2-1141359-639x423.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
@@ -188,8 +308,8 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/capturing-the-sun-1630684-639x426.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
@@ -206,12 +326,14 @@ section.sec-blog
                 .blog-item-vt_img-wrap
                   img.blog-item-vt_img(src="images/clock-face-1631303-639x426.jpg" alt)
                 .blog-item-vt_text
-                  h4.blog-item-vt_title 文章标题文章标题
                   .blog-item-category 电影影评
+                  h4.blog-item-title 文章标题文章标题
                   .blog-item-vt_info
                     .blog-item-vt_time 2016-10-10
                     .blog-item-vt_author 峰回路转
                     .blog-item-vt_like 58
                     .blog-item-vt_comment 17
+footer.foot
+  p.cp-rt.tc 所有内容 ©️ 2016 保留所有权利
 
 

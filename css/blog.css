@@ -1,0 +1,135 @@
+body {
+  background: #eee;
+}
+.head .head-top {
+  background: #2e0768;
+  color: #fff;
+}
+.head .head-middle {
+  background: #946ccf;
+}
+.head .logo-wrap {
+  float: left;
+  height: 60px;
+  padding: 10px;
+}
+.head .logo {
+  height: 40px;
+  line-height: 40px;
+  font-size: 28px;
+  color: #81a52f;
+  font-family: RaleWay, sans-serif;
+}
+.head .h-blog-wrap {
+  height: 80px;
+}
+.head .h-blog-wrap .center-wrap {
+  float: left;
+  height: 50%;
+  width: 100%;
+  margin-bottom: -30px;
+}
+.head .h-blog {
+  clear: both;
+  height: 60px;
+}
+.head .h-blog-title {
+  margin: 0;
+  color: #2e0768;
+  font-size: 40px;
+  height: 44px;
+  line-height: 44px;
+}
+.head .h-blog-desc {
+  margin: 0;
+  font-size: 13px;
+  color: #492a78;
+  height: 16px;
+  line-height: 16px;
+}
+.head .searchbar-wrap {
+  height: 80px;
+}
+.head .searchbar-wrap .center-wrap {
+  float: left;
+  height: 50%;
+  width: 100%;
+  margin-bottom: -20px;
+}
+.head .searchbar {
+  clear: both;
+}
+.head .navbar {
+  float: right;
+}
+.blog-category {
+  height: 40px;
+  text-align: center;
+}
+.blog-category a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 0 20px;
+}
+.sec-blog-left {
+  padding: 0;
+}
+.sec-blog-right {
+  padding: 0;
+}
+.sec-blog-right .blog-group {
+  float: right;
+  width: 99%;
+}
+.blog-item-wrap {
+  padding: 5px 4px 10px;
+}
+.blog-group {
+  width: 100%;
+  border: #ccc solid 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  margin: 0 0 20px;
+}
+.blog-group_head {
+  padding: 8px 0 4px;
+  border-bottom: #ccc solid 1px;
+  background: #f6f6f6;
+}
+.blog-group_title {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  color: #333;
+  font-size: 32px;
+  height: 40px;
+  line-height: 40px;
+}
+.blog-group_title-divider {
+  height: 4px;
+  width: 32px;
+  background: #7f48cf;
+  margin: auto;
+}
+.blog-group_title-desc {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+.blog-group_main {
+  padding: 20px 0 0;
+}
+.sec-overview {
+  padding: 0;
+}
+.sec-recommend {
+  padding: 0;
+}
+.sec-latest .blog-item-hz {
+  margin-bottom: 16px;
+}

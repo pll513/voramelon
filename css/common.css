@@ -38,6 +38,13 @@ li {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'RaleWay';
+  src: url('../fonts/raleway-light.eot');
+  src: url('../fonts/raleway-light.eot') format('embedded-opentype'), url('../fonts/raleway-light.woff2') format('woff2'), url('../fonts/raleway-light.woff') format('woff'), url('../fonts/raleway-light.ttf') format('truetype'), url('../fonts/raleway-light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*
  ** searchbar 搜索框
  */
@@ -54,6 +61,7 @@ li {
   height: 100%;
   border: 0;
   padding: 0 5px;
+  font-size: 16px;
   background: #fff;
 }
 .searchbar_btn {
@@ -68,6 +76,7 @@ li {
   border: 0;
   background: #81a52f;
   color: #fff;
+  font-size: 16px;
 }
 /*
  ** navbar 导航栏
@@ -89,7 +98,6 @@ li {
   text-decoration: none;
   display: block;
   padding: 0 10px;
-  cursor: pointer;
 }
 /*
  ** blog-item-info 博客图标部分
@@ -126,6 +134,28 @@ li {
   content: "\f006";
 }
 /*
+ ** blog-item-title 博客标题部分
+ */
+.blog-item-title {
+  margin: 16px 0 0;
+  font-size: 15px;
+  height: 36px;
+  line-height: 18px;
+  color: #333;
+  font-weight: 400;
+}
+/*
+ ** blog-item-desc 博客描述
+ */
+.blog-item-desc {
+  color: #777;
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+  height: 34px;
+  overflow: hidden;
+}
+/*
  ** blog-item-info 博客图标部分
  */
 .blog-item-category {
@@ -135,7 +165,6 @@ li {
   height: 16px;
   line-height: 16px;
   vertical-align: middle;
-  padding: 0 4px;
 }
 .blog-item-category:before {
   font-family: FontAwesome, sans-serif;
@@ -159,13 +188,10 @@ li {
   margin: auto;
   display: block;
   position: relative;
-  width: 272px;
-  height: 237px;
+  width: 100%;
+  height: 240px;
   background: #fff;
   overflow: hidden;
-}
-.blog-item-vt:hover {
-  cursor: pointer;
 }
 .blog-item-vt:hover .blog-item-vt_cover {
   top: 0;
@@ -184,9 +210,9 @@ li {
   z-index: 9;
   position: absolute;
   left: 0;
-  top: -153px;
+  top: -165px;
   width: 100%;
-  height: 153px;
+  height: 165px;
   background: #81a52f;
   opacity: 0.9;
 }
@@ -202,7 +228,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  height: 153px;
+  height: 165px;
   background: #aaa;
   overflow: hidden;
 }
@@ -218,26 +244,20 @@ li {
   width: 100%;
 }
 .blog-item-vt_text {
+  padding: 0 4px;
   position: absolute;
   left: 0;
-  top: 153px;
+  top: 165px;
   width: 100%;
-  height: 84px;
+  height: 75px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.blog-item-vt_title {
+.blog-item-vt_text .blog-item-title {
   margin: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 16px;
-  font-weight: 400;
   height: 32px;
   line-height: 32px;
-  color: #333;
-  padding: 0 4px;
 }
 .blog-item-vt_info {
   position: absolute;
@@ -297,7 +317,7 @@ li {
   margin: auto;
   display: block;
   position: relative;
-  width: 280px;
+  width: 100%;
   height: 90px;
   background: #fff;
 }
@@ -307,31 +327,21 @@ li {
   top: 0;
   left: 0;
   overflow: hidden;
-  width: 100px;
+  width: 160px;
   height: 100%;
 }
 .blog-item-hz_img {
   position: absolute;
-  height: 100%;
+  width: 100%;
+  bottom: 0;
 }
 .blog-item-hz_text {
   padding: 0 4px;
   position: absolute;
   top: 0;
-  left: 100px;
-  width: 180px;
+  left: 160px;
+  width: -60%;
   height: 90px;
-}
-.blog-item-hz_text .blog-item-category {
-  margin-left: 10px;
-}
-.blog-item-hz_title {
-  margin: 16px 0 0;
-  font-size: 15px;
-  height: 36px;
-  line-height: 18px;
-  color: #333;
-  font-weight: 400;
 }
 /*
  ** blog-item 博客
@@ -345,8 +355,12 @@ li {
   text-align: center;
   overflow: hidden;
 }
-.blog-item:hover {
-  cursor: pointer;
+.blog-item .blog-item-title {
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
+  color: #fff;
+  font-weight: 400;
 }
 .blog-item:hover .blog-item_cover {
   top: 140px;
@@ -394,11 +408,44 @@ li {
   z-index: 1;
   height: 100%;
 }
-.blog-item_title {
-  height: 40px;
-  margin: 0;
-  line-height: 40px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+/*
+ ** blog-item-vt-large 竖直博客(大)
+ */
+.blog-item-vt-large {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #fff;
+  overflow: hidden;
+}
+.blog-item-vt-large .blog-item-vt_img-wrap {
+  height: 360px;
+}
+.blog-item-vt-large .blog-item-vt_text {
+  top: 360px;
+  height: 120px;
+}
+/*
+ ** blog-item-hz-large 水平博客(大)
+ */
+.blog-item-hz-large {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #fff;
+}
+.blog-item-hz-large .blog-item-hz_text {
+  left: 270px;
+}
+.blog-item-hz-large .blog-item-hz_img-wrap {
+  width: 270px;
+  height: 100%;
+}
+.blog-item-hz-large .blog-item-hz_img {
+  height: 100%;
+  width: auto;
 }
