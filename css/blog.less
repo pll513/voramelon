@@ -21,7 +21,7 @@
 
 
 body {
-  background: #eee;
+  background: #f2f2f2;
 }
 
 
@@ -41,7 +41,6 @@ body {
     font-size: 28px;
     color: @green-4;
     font-family: RaleWay, sans-serif;
-    //font-weight: 900;
   }
   .navbar {
     color: #333;
@@ -116,66 +115,12 @@ body {
   }
 }
 
-.sec-blog-left {
-  padding: 0;
-  //.blog-group {
-  //  margin-right: 5px;
-  //}
-}
-.sec-blog-right {
-  padding: 0;
-  .blog-group {
-    float: right;
-    width: 99%;
-  }
-}
-
 .blog-item-wrap {
   padding: 0 4px 10px;
 }
 
-.blog-group {
-  width: 100%;
-  border: #ccc solid 1px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  background: #fff;
-  margin: 0 0 20px;
-}
-.blog-group_head {
-  padding: 8px 0 4px;
-  border-bottom: #ccc solid 1px;
-  background: #f6f6f6;
-}
-.blog-group_title {
-  position: relative;
-  text-align: center;
-  margin: 0;
-  color: #333;
-  font-size: 32px;
-  height: 40px;
-  line-height: 40px;
-}
-.blog-group_title-divider {
-  height: 4px;
-  width: 32px;
-  background: @purple-4;
-  margin: auto;
-}
-.blog-group_title-desc {
-  margin: 10px 0 0;
-  text-align: center;
-  color: #555;
-  font-size: 14px;
-}
-
-.blog-group_main {
-  padding: 20px 0 0;
-}
-
-
 .sec-banner {
+  padding: 0 0 100px;
   color: #333;
   text-align: center;
   .banner-title {
@@ -192,20 +137,106 @@ body {
   }
 }
 
-
 .sec-overview {
-  padding: 0;
+  padding: 40px 0;
+  //background: #fff;
+  background: #ddd;
+}
+.blog-data {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+}
+.blog-data_item {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  margin: auto;
+}
+.blog-data_blog-cnt, .blog-data_author-cnt, .blog-data_like-cnt {
+  padding: 0 20px;
 }
 
 .sec-recommend {
-  padding: 0;
+  padding: 40px 0;
+  background: #444;
+  color: #fff;
 }
 
 .sec-latest {
+  padding: 40px 0;
+  .blog-item-wrap {
+    margin-bottom: 40px;
+  }
   .blog-item-hz {
     margin-bottom: 16px;
   }
 }
 
+.sec-join {
+  padding: 50px 0 30px;
+  background: @purple-1;
+  .btn {
+    margin: 40px auto;
+  }
+  p {
+    color: #ddd;
+  }
+}
+
+.sec-bloglist {
+  padding: 40px 0;
+}
+
+
+/*
+ ** sec-head 片段头部
+ */
+
+.sec-head {
+  text-align: center;
+  padding: 0 0 40px;
+}
+.sec-head_title {
+  margin: 0;
+  height: 48px;
+  line-height: 48px;
+  font-size: 40px;
+  font-weight: 400;
+  color: #333;
+}
+.sec-head_divider {
+  height: 4px;
+  width: 32px;
+  background: @green-4;
+  margin: auto;
+}
+.sec-head_desc {
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.sec-head.cw {
+  .sec-head_title {
+    color: #eee;
+  }
+  .sec-head_desc {
+    color: #ddd;
+  }
+}
+
+.foot {
+  .cp-rt {
+    color: #555;
+    font-size: 16px;
+  }
+}
 
 
