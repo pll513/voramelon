@@ -42,8 +42,9 @@ ol, ul {
 li {
   list-style: none;
 }
-* {
-  font-family: Arial, Helvetica, sans-serif, 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei';
+body, input, textarea, select, button {
+  //font-family: Arial, Helvetica, sans-serif, 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei';
+  font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif
 }
 ::-moz-selection {
   background: @green-4;
@@ -94,13 +95,14 @@ li {
   padding: 0 5px;
   font-size: 16px;
   background: #fff;
-
+  color: #555;
 
 }
 .searchbar_btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0;
   float: left;
   width: @searchbar-btn-width;
   height: 100%;
@@ -111,7 +113,6 @@ li {
   background: @green-4;
   color: #fff;
   font-size: 16px;
-  //vertical-align: middle;
 }
 
 
@@ -311,6 +312,9 @@ li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: justify;
+  -ms-text-justify: distribute;
+  text-justify: distribute;
   .blog-item-title {
     margin: 0;
     height: 32px;
@@ -548,3 +552,37 @@ li {
   }
 }
 
+
+/*
+ ** blog-item-large 博客
+ */
+
+@blog-item-large-height: 320px;
+
+.blog-item-large {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: @blog-item-large-height;
+  background: #aaa;
+  text-align: center;
+  overflow: hidden;
+  &:hover {
+    .blog-item_cover {
+      top: @blog-item-large-height - 160px;
+    }
+  }
+  .blog-item-title {
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+  }
+  .blog-item_cover {
+    height: @blog-item-large-height;
+    top: @blog-item-large-height - 80px;
+    //background: @purple-1;
+    background: @green-4;
+  }
+}

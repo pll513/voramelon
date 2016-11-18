@@ -7,13 +7,16 @@ head
   link(rel="stylesheet" type="text/css" href="css/blog.css")
 body
 header.head.clearfix
-  .head-top.clearfix
-    .container
-      .row
+  .container
+    .row
+      .l-4
         .logo-wrap
           a.logo VORAMELON
+      .l-6.l-offset-2
         nav.nav
           ul.navbar
+            li
+              a 首页
             li
               a 博客
             li
@@ -22,31 +25,23 @@ header.head.clearfix
               a 图
             li
               a 其他
-  .head-middle.clearfix
-    .container
-      .row.pv3
-        .l-4
-          .h-blog-wrap
-            .center-wrap
-            .h-blog
-              h2.h-blog-title 博客
-              p.h-blog-desc 描述描述描述即大家诶简单记得叫几
-        .l-4.l-offset-4
-          .searchbar-wrap
-            .center-wrap
-            form.searchbar
-              input.searchbar_input(type="text" placeholder="my placeholder")
-              input.searchbar_btn(type="submit" value="SEARCH")
+section.sec-banner.clearfix
+  h1.banner-title 博客
+  p.banner-desc 描述描述描述即大家诶简单记得叫几描述描述描述即大家诶简单记得叫几
+  .searchbar-wrap
+    form.searchbar
+      input.searchbar_input(type="text" placeholder="你的关键词很重要")
+      input.searchbar_btn(type="submit" value="查找")
 
 section.sec-blog
   .container
     .blog-category
+      a(href="#").curr 全部
       a(href="#") 电影
       a(href="#") 前端
       a(href="#") 数学
       a(href="#") 游戏
       a(href="#") 音乐
-      a(href="#") 其他
     .row
       .l-12.sec-overview
         .blog-group
@@ -108,36 +103,63 @@ section.sec-blog
                         .blog-item-vt_comment 17
 
             .l-5
-              .blog-item-hz
-                .blog-item-hz_img-wrap
-                  img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
-                .blog-item-hz_text
-                  .blog-item-category 前端开发
-                  h4.blog-item-title 主题主题主题主题
-              .blog-item-hz
-                .blog-item-hz_img-wrap
-                  img.blog-item-hz_img(src="images/animales-acuaticos-1633555-640x360.jpg" alt)
-                .blog-item-hz_text
-                  .blog-item-category 前端开发
-                  h4.blog-item-title 主题主题主题主题
-              .blog-item-hz
-                .blog-item-hz_img-wrap
-                  img.blog-item-hz_img(src="images/seastar-1630263-640x360.jpg" alt)
-                .blog-item-hz_text
-                  .blog-item-category 前端开发
-                  h4.blog-item-title 主题主题主题主题
-              .blog-item-hz
-                .blog-item-hz_img-wrap
-                  img.blog-item-hz_img(src="images/philadelphia-at-night-1635022-639x426.jpg" alt)
-                .blog-item-hz_text
-                  .blog-item-category 前端开发
-                  h4.blog-item-title 主题主题主题主题
-              .blog-item-hz-large
-                .blog-item-hz_img-wrap
-                  img.blog-item-hz_img(src="images/keyboard-1615144-639x958.jpg" alt)
-                .blog-item-hz_text
-                  .blog-item-category 前端开发
-                  h4.blog-item-title 主题主题主题主题
+              .l-12.blog-item-wrap
+                .blog-item-large
+                  img.blog-item_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
+                  .blog-item_cover
+                    h4.blog-item-title 主题主题主题主题
+                    .blog-item-info
+                      .blog-item-info_like 58
+                      .blog-item-info_star 2
+                      .blog-item-info_comment 17
+              .l-12.blog-item-wrap
+                .blog-item-large
+                  img.blog-item_img(src="images/business-finance-money-1632103-639x459.jpg" alt)
+                  .blog-item_cover
+                    h4.blog-item-title 主题主题主题主题
+                    .blog-item-info
+                      .blog-item-info_like 58
+                      .blog-item-info_star 2
+                      .blog-item-info_comment 17
+              .l-12.blog-item-wrap
+                .blog-item-large
+                  img.blog-item_img(src="images/calculator-close-up-1630074-639x469.jpg" alt)
+                  .blog-item_cover
+                    h4.blog-item-title 主题主题主题主题
+                    .blog-item-info
+                      .blog-item-info_like 58
+                      .blog-item-info_star 2
+                      .blog-item-info_comment 17
+              //.blog-item-hz
+              //  .blog-item-hz_img-wrap
+              //    img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)
+              //  .blog-item-hz_text
+              //    .blog-item-category 前端开发
+              //    h4.blog-item-title 主题主题主题主题
+              //.blog-item-hz
+              //  .blog-item-hz_img-wrap
+              //    img.blog-item-hz_img(src="images/animales-acuaticos-1633555-640x360.jpg" alt)
+              //  .blog-item-hz_text
+              //    .blog-item-category 前端开发
+              //    h4.blog-item-title 主题主题主题主题
+              //.blog-item-hz
+              //  .blog-item-hz_img-wrap
+              //    img.blog-item-hz_img(src="images/seastar-1630263-640x360.jpg" alt)
+              //  .blog-item-hz_text
+              //    .blog-item-category 前端开发
+              //    h4.blog-item-title 主题主题主题主题
+              //.blog-item-hz
+              //  .blog-item-hz_img-wrap
+              //    img.blog-item-hz_img(src="images/philadelphia-at-night-1635022-639x426.jpg" alt)
+              //  .blog-item-hz_text
+              //    .blog-item-category 前端开发
+              //    h4.blog-item-title 主题主题主题主题
+              //.blog-item-hz-large
+              //  .blog-item-hz_img-wrap
+              //    img.blog-item-hz_img(src="images/keyboard-1615144-639x958.jpg" alt)
+              //  .blog-item-hz_text
+              //    .blog-item-category 前端开发
+              //    h4.blog-item-title 主题主题主题主题
 
 
     .row

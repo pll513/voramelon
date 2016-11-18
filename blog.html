@@ -8,12 +8,15 @@
 </head>
 <body></body>
 <header class="head clearfix">
-  <div class="head-top clearfix">
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="l-4">
         <div class="logo-wrap"><a class="logo">VORAMELON</a></div>
+      </div>
+      <div class="l-6 l-offset-2">
         <nav class="nav">
           <ul class="navbar">
+            <li><a>首页</a></li>
             <li><a>博客</a></li>
             <li><a>游戏</a></li>
             <li><a>图</a></li>
@@ -23,34 +26,20 @@
       </div>
     </div>
   </div>
-  <div class="head-middle clearfix">
-    <div class="container">
-      <div class="row pv3">
-        <div class="l-4">
-          <div class="h-blog-wrap">
-            <div class="center-wrap"></div>
-            <div class="h-blog">
-              <h2 class="h-blog-title">博客</h2>
-              <p class="h-blog-desc">描述描述描述即大家诶简单记得叫几</p>
-            </div>
-          </div>
-        </div>
-        <div class="l-4 l-offset-4">
-          <div class="searchbar-wrap">
-            <div class="center-wrap"></div>
-            <form class="searchbar">
-              <input type="text" placeholder="my placeholder" class="searchbar_input">
-              <input type="submit" value="SEARCH" class="searchbar_btn">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
+<section class="sec-banner clearfix">
+  <h1 class="banner-title">博客</h1>
+  <p class="banner-desc">描述描述描述即大家诶简单记得叫几描述描述描述即大家诶简单记得叫几</p>
+  <div class="searchbar-wrap">
+    <form class="searchbar">
+      <input type="text" placeholder="你的关键词很重要" class="searchbar_input">
+      <input type="submit" value="查找" class="searchbar_btn">
+    </form>
+  </div>
+</section>
 <section class="sec-blog">
   <div class="container">
-    <div class="blog-category"><a href="#">电影</a><a href="#">前端</a><a href="#">数学</a><a href="#">游戏</a><a href="#">音乐</a><a href="#">其他</a></div>
+    <div class="blog-category"><a href="#" class="curr">全部</a><a href="#">电影</a><a href="#">前端</a><a href="#">数学</a><a href="#">游戏</a><a href="#">音乐</a></div>
     <div class="row">
       <div class="l-12 sec-overview">
         <div class="blog-group">
@@ -127,41 +116,73 @@
               </div>
             </div>
             <div class="l-5">
-              <div class="blog-item-hz">
-                <div class="blog-item-hz_img-wrap"><img src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt class="blog-item-hz_img"></div>
-                <div class="blog-item-hz_text">
-                  <div class="blog-item-category">前端开发</div>
-                  <h4 class="blog-item-title">主题主题主题主题</h4>
+              <div class="l-12 blog-item-wrap">
+                <div class="blog-item-large"><img src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt class="blog-item_img">
+                  <div class="blog-item_cover">
+                    <h4 class="blog-item-title">主题主题主题主题</h4>
+                    <div class="blog-item-info">
+                      <div class="blog-item-info_like">58</div>
+                      <div class="blog-item-info_star">2</div>
+                      <div class="blog-item-info_comment">17</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="blog-item-hz">
-                <div class="blog-item-hz_img-wrap"><img src="images/animales-acuaticos-1633555-640x360.jpg" alt class="blog-item-hz_img"></div>
-                <div class="blog-item-hz_text">
-                  <div class="blog-item-category">前端开发</div>
-                  <h4 class="blog-item-title">主题主题主题主题</h4>
+              <div class="l-12 blog-item-wrap">
+                <div class="blog-item-large"><img src="images/business-finance-money-1632103-639x459.jpg" alt class="blog-item_img">
+                  <div class="blog-item_cover">
+                    <h4 class="blog-item-title">主题主题主题主题</h4>
+                    <div class="blog-item-info">
+                      <div class="blog-item-info_like">58</div>
+                      <div class="blog-item-info_star">2</div>
+                      <div class="blog-item-info_comment">17</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="blog-item-hz">
-                <div class="blog-item-hz_img-wrap"><img src="images/seastar-1630263-640x360.jpg" alt class="blog-item-hz_img"></div>
-                <div class="blog-item-hz_text">
-                  <div class="blog-item-category">前端开发</div>
-                  <h4 class="blog-item-title">主题主题主题主题</h4>
+              <div class="l-12 blog-item-wrap">
+                <div class="blog-item-large"><img src="images/calculator-close-up-1630074-639x469.jpg" alt class="blog-item_img">
+                  <div class="blog-item_cover">
+                    <h4 class="blog-item-title">主题主题主题主题</h4>
+                    <div class="blog-item-info">
+                      <div class="blog-item-info_like">58</div>
+                      <div class="blog-item-info_star">2</div>
+                      <div class="blog-item-info_comment">17</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="blog-item-hz">
-                <div class="blog-item-hz_img-wrap"><img src="images/philadelphia-at-night-1635022-639x426.jpg" alt class="blog-item-hz_img"></div>
-                <div class="blog-item-hz_text">
-                  <div class="blog-item-category">前端开发</div>
-                  <h4 class="blog-item-title">主题主题主题主题</h4>
-                </div>
-              </div>
-              <div class="blog-item-hz-large">
-                <div class="blog-item-hz_img-wrap"><img src="images/keyboard-1615144-639x958.jpg" alt class="blog-item-hz_img"></div>
-                <div class="blog-item-hz_text">
-                  <div class="blog-item-category">前端开发</div>
-                  <h4 class="blog-item-title">主题主题主题主题</h4>
-                </div>
-              </div>
+              <!--.blog-item-hz-->
+              <!--  .blog-item-hz_img-wrap-->
+              <!--    img.blog-item-hz_img(src="images/colored-pencils-forming-a-spiral-1631358-638x426.jpg" alt)-->
+              <!--  .blog-item-hz_text-->
+              <!--    .blog-item-category 前端开发-->
+              <!--    h4.blog-item-title 主题主题主题主题-->
+              <!--.blog-item-hz-->
+              <!--  .blog-item-hz_img-wrap-->
+              <!--    img.blog-item-hz_img(src="images/animales-acuaticos-1633555-640x360.jpg" alt)-->
+              <!--  .blog-item-hz_text-->
+              <!--    .blog-item-category 前端开发-->
+              <!--    h4.blog-item-title 主题主题主题主题-->
+              <!--.blog-item-hz-->
+              <!--  .blog-item-hz_img-wrap-->
+              <!--    img.blog-item-hz_img(src="images/seastar-1630263-640x360.jpg" alt)-->
+              <!--  .blog-item-hz_text-->
+              <!--    .blog-item-category 前端开发-->
+              <!--    h4.blog-item-title 主题主题主题主题-->
+              <!--.blog-item-hz-->
+              <!--  .blog-item-hz_img-wrap-->
+              <!--    img.blog-item-hz_img(src="images/philadelphia-at-night-1635022-639x426.jpg" alt)-->
+              <!--  .blog-item-hz_text-->
+              <!--    .blog-item-category 前端开发-->
+              <!--    h4.blog-item-title 主题主题主题主题-->
+              <!--.blog-item-hz-large-->
+              <!--  .blog-item-hz_img-wrap-->
+              <!--    img.blog-item-hz_img(src="images/keyboard-1615144-639x958.jpg" alt)-->
+              <!--  .blog-item-hz_text-->
+              <!--    .blog-item-category 前端开发-->
+              <!--    h4.blog-item-title 主题主题主题主题-->
+              
             </div>
           </main>
         </div>
