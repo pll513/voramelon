@@ -1,30 +1,52 @@
-.logo-wrap {
+.head {
+  background: #fff;
+  box-shadow: 0 4px 3px #ddd;
+}
+.head-left {
   float: left;
   padding: 10px;
 }
-.logo {
+.head-right {
+  float: right;
+  padding: 10px;
+}
+.head-text {
   height: 40px;
   line-height: 40px;
+  color: #666;
+  font-size: 14px;
+}
+.head-text span {
+  margin: 0 4px;
+}
+.head-text a:hover {
+  color: #111;
+}
+.logo {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #81a52f;
 }
 .nav {
   float: left;
 }
-.sec-banner {
-  height: 400px;
-  background: #aaa;
-  text-align: center;
+.searchbar-round-wrap {
+  float: left;
+  padding: 15px 0;
 }
-.searchbar-wrap {
-  text-align: center;
-  height: 40px;
+.sec-category {
+  border-bottom: 1px solid #bbb;
+  padding: 14px 0 0;
 }
-.searchbar {
-  display: inline-block;
-}
-.sec-overview {
-  text-align: center;
+.blog-item-list {
+  width: 540px;
+  margin: auto;
 }
 .foot {
+  border-top: 1px solid #bbb;
   text-align: center;
 }
 .icon-contact {
@@ -42,15 +64,19 @@
   content: "\f18a";
 }
 .foot-nav {
-  font-size: 0;
+  font-size: 14px;
   -webkit-text-size-adjust: none;
+  text-align: center;
+  color: #666;
 }
-.foot-nav > a {
-  margin: 0 20px;
-  display: inline-block;
-  font-size: 16px;
+.foot-nav > a:hover {
+  color: #111;
+}
+.foot-nav > span {
+  margin: 0 8px;
 }
 .cp-rt {
+  color: #666;
   font-size: 14px;
   text-align: center;
 }
