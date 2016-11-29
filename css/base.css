@@ -437,7 +437,7 @@ template {
   }
 }
 .row {
-  padding: 0 -15px;
+  padding: 0 -10px;
 }
 .row:before,
 .row:after {
@@ -494,7 +494,7 @@ template {
 .l-11,
 .l-12 {
   float: left;
-  padding: 0 15px;
+  padding: 0 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -844,6 +844,10 @@ button {
 .p5 {
   padding: 36px;
 }
+.ph0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .ph1 {
   padding-left: 4px;
   padding-right: 4px;
@@ -863,6 +867,10 @@ button {
 .ph5 {
   padding-left: 36px;
   padding-right: 36px;
+}
+.pv0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .pv1 {
   padding-top: 4px;
@@ -884,6 +892,9 @@ button {
   padding-top: 36px;
   padding-bottom: 36px;
 }
+.pl0 {
+  padding-left: 0;
+}
 .pl1 {
   padding-left: 4px;
 }
@@ -898,6 +909,9 @@ button {
 }
 .pl5 {
   padding-left: 36px;
+}
+.pr0 {
+  padding-right: 0;
 }
 .pr1 {
   padding-right: 4px;
@@ -914,6 +928,9 @@ button {
 .pr5 {
   padding-right: 36px;
 }
+.pt0 {
+  padding-top: 0;
+}
 .pt1 {
   padding-top: 4px;
 }
@@ -928,6 +945,9 @@ button {
 }
 .pt5 {
   padding-top: 36px;
+}
+.pb0 {
+  padding-bottom: 0;
 }
 .pb1 {
   padding-bottom: 4px;

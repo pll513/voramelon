@@ -1,102 +1,15 @@
-.head {
-  background: #fff;
-  box-shadow: 0 4px 3px #ddd;
-}
-.head-left {
-  float: left;
-  padding: 10px;
-}
-.head-right {
-  float: right;
-  padding: 10px;
-}
-.head-text {
-  height: 40px;
-  line-height: 40px;
-  color: #666;
-  font-size: 14px;
-}
-.head-text span {
-  margin: 0 4px;
-}
-.head-text a:hover {
-  color: #111;
-}
-.logo {
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #81a52f;
-}
-.nav {
-  float: left;
-}
-.searchbar-round-wrap {
-  float: left;
-  padding: 15px 0;
+.sec-recommend {
+  margin: 5px 0 0 0;
+  background: #fafafa;
 }
 .sec-category {
-  border-bottom: 1px solid #bbb;
-  padding: 14px 0 0;
+  background: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 -3px 3px #ccc;
+  -moz-box-shadow: 0 -3px 3px #ccc;
+  box-shadow: 0 -3px 3px #ccc;
 }
 .blog-item-list {
   width: 540px;
   margin: auto;
-}
-.foot {
-  border-top: 1px solid #bbb;
-  text-align: center;
-}
-.icon-contact {
-  font-family: FontAwesome, sans-serif;
-  font-style: normal;
-  font-size: 30px;
-}
-.icon-contact.qq:after {
-  content: "\f1d6";
-}
-.icon-contact.wechat:after {
-  content: "\f1d7";
-}
-.icon-contact.weibo:after {
-  content: "\f18a";
-}
-.foot-nav {
-  font-size: 14px;
-  -webkit-text-size-adjust: none;
-  text-align: center;
-  color: #666;
-}
-.foot-nav > a:hover {
-  color: #111;
-}
-.foot-nav > span {
-  margin: 0 8px;
-}
-.cp-rt {
-  color: #666;
-  font-size: 14px;
-  text-align: center;
-}
-/*
- ** intro-block
- */
-.intro-block {
-  text-align: center;
-}
-.intro-block_icon:after {
-  font-family: FontAwesome, sans-serif;
-  font-size: 40px;
-  font-style: normal;
-}
-.intro-block_icon.i-blog:after {
-  content: "\f0f6";
-}
-.intro-block_icon.i-game:after {
-  content: "\f11b";
-}
-.intro-block_icon.i-image:after {
-  content: "\f03e";
 }
