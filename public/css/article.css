@@ -1,0 +1,27 @@
+.sec-banner {
+  padding: 100px 0;
+}
+.sec-banner h1 {
+  line-height: 72px;
+  max-height: 144px;
+  overflow: hidden;
+}
+.sec-banner .avatar {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 768px) {
+  .sec-banner h1 {
+    line-height: 48px;
+    font-size: 40px;
+  }
+}
+.markdown-body {
+  width: 750px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .markdown-body {
+    width: 100%;
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+  <title>博客标题</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/article.css">
+  <link rel="stylesheet" type="text/css" href="css/github-markdown.css">
+</head>
+<body>
+  <header class="head clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="l-2 m-2 s-2 x-3">
+          <div class="logo-wrap">
+            <div class="logo">懒瓜</div>
+          </div>
+        </div>
+        <div class="l-7 m-6 s-5 head-nav">
+          <ul class="navbar">
+            <li><a class="curr">博客</a></li>
+            <li><a>游戏</a></li>
+            <li><a>图片</a></li>
+            <li><a>其他</a></li>
+          </ul>
+        </div>
+        <div class="l-2 m-3 s-3 x-6">
+          <div class="searchbar-round-wrap">
+            <form class="searchbar-round">
+              <input type="text" placeholder="搜索" class="searchbar-round_input">
+              <submit class="searchbar-round_btn"><i class="searchbar-round_icon"></i></submit>
+            </form>
+          </div>
+        </div>
+        <div class="l-1 m-1 s-2 pl0 head-text">
+          <div class="text-wrap">
+            <div class="text"><a>登陆</a><span>|</span><a>注册</a></div>
+          </div>
+        </div>
+        <div class="x-3 head-toggle">
+          <div class="nav-toggle-wrap">
+            <button id="nav-toggle" class="nav-toggle"><i class="nav-toggle_icon"></i></button>
+          </div>
+          <div id="head-toggle-detail" class="head-toggle-detail none">
+            <ul class="navbar">
+              <li><a class="curr">博客</a></li>
+              <li><a>游戏</a></li>
+              <li><a>图片</a></li>
+              <li><a>其他</a></li>
+            </ul>
+            <div class="text"><a>登陆</a><span>|</span><a>注册</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section style="background-image:url('images/image-h-3.jpg');" class="sec-banner pr bg-img h600 bdbx">
+    <div class="bg-cover z1"></div>
+    <div class="pa z9 w h">
+      <div class="container">
+        <div class="row">
+          <div class="l-10 l-offset-1 m-10 m-offset-1 s-10 s-offset-1 x-10 x-offset-1">
+            <h1 class="mv2 f60 f-white tj">这是一篇博客的标题很长很长很长很长很长很长很长</h1>
+          </div>
+          <div class="x-8 x-offset-2">
+            <div class="tc">
+              <div class="avatar mauto"><img src="users/upload-avatars/avatar-4.jpg"></div><a class="link">峰会路转</a><span class="f-white">发表于3天前</span>
+            </div>
+            <p class="t2 tj f16 f-white">博客的简介 可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字
+              <!--span 阅读123-->
+              <!--span 评论34-->
+              <!--span 喜欢56-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <article class="markdown-body"><h1>MacDown</h1>
+
+<p>Hello there! I’m <strong>MacDown</strong>, the open source Markdown editor for OS X.</p>
+
+<p>Let me introduce myself.</p>
+
+<h2>Markdown and I</h2>
+
+<p><strong>Markdown</strong> is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
+
+<p><strong>MacDown</strong> is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.</p>
+
+<p>I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>.</p>
+
+<p>You can specify extra HTML rendering options through the <a href="#rendering-pane"><strong>Rendering</strong> preference pane</a>.</p>
+
+<p>You can customize the editor window to you liking in the <a href="#editor-pane"><strong>Editor</strong> preferences pane</a>:</p>
+
+<p>You can configure various application (that&#39;s me!) behaviors in the <a href="#general-pane"><strong>General</strong> preference pane</a>.</p>
+
+<h2>The Basics</h2>
+
+<p>Before I tell you about all the extra syntaxes and capabilities I have, I&#39;ll introduce you to the basics of standard markdown. If you already know markdown, and want to jump straight to learning about the fancier things I can do, I suggest you skip to the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>. Lets jump right in.  </p>
+
+<h3>Line Breaks</h3>
+
+<p>To force a line break, put two spaces and a newline (return) at the end of the line.</p>
+
+<ul><li><p>This two-line bullet
+  won&#39;t break</p></li><li><p>This two-line bullet<br/>will break</p></li></ul>
+
+<p>Here is the code:</p>
+
+<p><code></code>`
+  * This two-line bullet
+  won&#39;t break</p>
+
+<ul><li>This two-line bullet<br/>will break
+  <code></code>`</li></ul>
+
+<h3>Strong and Emphasize</h3>
+
+<p><strong>Strong</strong>: <code>**Strong**</code> or <code>__Strong__</code> (Command-B)<br/><em>Emphasize</em>: <code>*Emphasize*</code> or <code>_Emphasize_</code><a href="Command-I">^emphasize</a></p>
+
+<h3>Headers (like this one!)</h3>
+
+      </article>
+    </div>
+  </div>
+  <!--section.clearfix-->
+  <!--  form.comment-editor-->
+  <!--    textarea.comment-editor_text(placeholder="如果你有什么要说的话...")-->
+  <!--    input.btn.comment-editor_submit(type="submit" value="发表")-->
+  <section style="background-image:url('images/image-h-2.jpg');" class="bg-img clearfix h800 pr">
+    <div class="bg-cover z1"></div>
+    <div class="pa z9 w h">
+      <div class="container">
+        <div class="row">
+          <ul class="comment-list w600 mauto">
+            <li class="comment">
+              <div class="clearfix"><a href="#" class="avatar"><img src="users/upload-avatars/avatar-1.jpg"></a><a class="comment_author">间谍减肥</a>
+                <div class="comment_time">发表于 2016/11/22 14:45</div>
+              </div>
+              <div class="comment_text">我觉得接机哦啊何方呃激将法飞机发帕蒂俄警方男</div>
+            </li>
+            <li class="comment">
+              <div class="clearfix"><a class="avatar"><img src="users/upload-avatars/avatar-2.jpg"></a><a class="comment_author">Looede</a><span class="comment_time">发表于 2016/11/22 14:45</span></div>
+              <div class="comment_text">我觉得接机哦啊何方呃激将法飞机发帕蒂俄警方男得解决碟机佛即佛界哦减肥就诶减肥得空哦软件昆明的时刻恶斗佛鳄接哦减肥的爹</div>
+            </li>
+            <li class="comment">
+              <div class="clearfix"><a class="avatar"><img src="users/upload-avatars/avatar-3.jpg"></a><a class="comment_author">大街</a><span class="comment_time">发表于 2016/11/22 14:45</span></div>
+              <div class="comment_text">我觉得接机哦啊何方呃激将法飞机发帕蒂俄警方男</div>
+            </li>
+            <div class="tc mt3"><a class="link">展开更多评论</a></div>
+          </ul>
+          <form class="comment-editor mt4 mauto">
+            <textarea placeholder="如果你有什么要说的话..." class="comment-editor_text"></textarea>
+            <input type="submit" value="发表" class="btn comment-editor_submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot clearfix pv4">
+    <div class="container">
+      <hr>
+      <div class="row"></div>
+    </div>
+    <!--h2 VORAMELON-->
+    <!--.foot-contact-list-->
+    <!--  a.icon-contact.qq-->
+    <!--  a.icon-contact.wechat-->
+    <!--  a.icon-contact.weibo-->
+    <nav class="foot-nav mt3"><a>关于懒瓜</a><span>|</span><a>联系我们</a><span>|</span><a>周边链接</a><span>|</span><a>帮助</a><span>|</span><a>其他说明</a></nav>
+    <p class="cp-rt">所有内容 ©️ 2016 保留所有权利</p>
+  </footer>
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="js/article.js"></script>
+</body>
