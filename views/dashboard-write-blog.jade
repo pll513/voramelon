@@ -1,0 +1,22 @@
+h1.page-header 写博客
+.row.placeholders
+  .col-md-6.col-xm-12
+    h2 markdown编辑器
+    form.form-write
+      .form-group
+        label 标题
+        input.form-control(type="text" name="blog-title" placeholder="文章标题")
+      .form-group
+        label 正文
+        textarea.form-control(name="blog-content" placeholder="在这里写文章...")
+      .form-group
+        label 文件名称（作为url使用）
+        input.form-control(type="text" name="blog-filename" placeholder="示例：my-first-blog")
+      input.btn.btn-block.btn-primary.btn-large(type="submit" value="写好了")
+  .col-md-6.col-xm-12
+    h2 预览
+    .preview
+      .markdown-body
+        include ../test-article-short.html
+
+
