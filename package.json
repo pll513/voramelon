@@ -23,7 +23,11 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "mongodb": "~2.2.12"
+    "mongodb": "~2.2.12",
+    "assert": "~1.4.1",
+    "generic-pool": "~2.5",
+    "multer": "~1.2.0",
+    "uuid": "~3.0.1"
   },
   "devDependencies": {},
   "description": ""

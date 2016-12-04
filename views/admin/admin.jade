@@ -1,0 +1,17 @@
+doctype html
+head
+  block title
+    title Dashboard
+  meta(charset="utf-8")
+  link(rel="stylesheet" type="text/css" href="/css/bootstrap.css")
+  link(rel="stylesheet" type="text/css" href="/css/admin.css")
+  link(rel="stylesheet" type="text/css" href="/css/github-markdown.css")
+body
+  include admin-head
+  .container-fluid
+    .row
+      .col-sm-3.col-md-2.sidebar
+        include admin-sidebar
+      .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+        block content
+          include admin-index

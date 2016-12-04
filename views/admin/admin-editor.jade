@@ -1,0 +1,31 @@
+h1.page-header 写博客
+.row.placeholders
+  .col-md-6.col-xm-12
+    h2 markdown编辑器
+    form.form-write(method="post" action="/admin/drafts" enctype="multipart/form-data")
+      .form-group
+        label 标题
+        input.form-control(type="text" name="draft-title" placeholder="博客标题")
+      .form-group
+        label 博客描述
+        textarea.form-control(name="draft-desc" placeholder="在这里写博客的描述...")
+      .form-group
+        label 正文
+        textarea.form-control(name="draft-markdown" placeholder="在这里写正文...")
+      .form-group
+        label 分类
+        input.form-control(type="text" name="draft-type" placeholder="博客分类")
+      .form-group
+        label 文件名称（作为uri使用）
+        input.form-control(type="text" name="draft-uri" placeholder="示例：my-first-blog")
+      .from-group
+        label 图片
+        input.form-control(type="file" name="draft-img" accept="image/x-png,image/jpeg,image/bmp")
+      input.btn.btn-block.btn-primary.btn-large(type="submit" value="写好了")
+  .col-md-6.col-xm-12
+    h2 预览
+    .preview
+      .markdown-body
+        include ../../test-article-short.html
+
+

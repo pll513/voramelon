@@ -1,5 +1,7 @@
 .idea
-.node_modules
+node_modules
+tests
+config.js
 component.jade
 component.html
 test.jade
