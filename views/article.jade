@@ -2,39 +2,31 @@ doctype html
 head
   title 博客标题
   meta(charset="utf-8")
-  link(rel="stylesheet" type="text/css" href="css/base.css")
-  link(rel="stylesheet" type="text/css" href="css/common.css")
-  link(rel="stylesheet" type="text/css" href="css/article.css")
-  link(rel="stylesheet" type="text/css" href="css/github-markdown.css")
+  link(rel="stylesheet" type="text/css" href="/css/base.css")
+  link(rel="stylesheet" type="text/css" href="/css/common.css")
+  link(rel="stylesheet" type="text/css" href="/css/article.css")
+  link(rel="stylesheet" type="text/css" href="/css/github-markdown.css")
 body
   include head
-  section.sec-banner.pr.bg-img.h600.bdbx(style="background-image:url('images/image-h-3.jpg');")
+  section.sec-banner.pr.bg-img.h600.bdbx(style="background-image:url('#{blog.img}');")
     .bg-cover.z1
     .pa.z9.w.h
       .container
         .row
           .l-10.l-offset-1.m-10.m-offset-1.s-10.s-offset-1.x-10.x-offset-1
-            h1.mv2.f60.f-white.tj 这是一篇博客的标题很长很长很长很长很长很长很长
+            h1.mv2.f60.f-white.tj #{blog.title}
           .x-8.x-offset-2
             .tc
               .avatar.mauto
-                img(src="users/upload-avatars/avatar-4.jpg")
+                img(src="/users/upload-avatars/avatar-4.jpg")
               a.link 峰会路转
-              span.f-white 发表于3天前
-            p.t2.tj.f16.f-white 博客的简介 可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字可以是大段的文字文字
-              //span 阅读123
-              //span 评论34
-              //span 喜欢56
+              span.f-white 发表于 #{blog.time}
+            p.t2.tj.f16.f-white #{blog.desc}
 
   .container
     .row
-      article.markdown-body
-        include ../test-article-short.html
-  //section.clearfix
-  //  form.comment-editor
-  //    textarea.comment-editor_text(placeholder="如果你有什么要说的话...")
-  //    input.btn.comment-editor_submit(type="submit" value="发表")
-  section.bg-img.clearfix.h800.pr(style="background-image:url('images/image-h-2.jpg');")
+      article.markdown-body !{blog.html}
+  section.bg-img.clearfix.h800.pr(style="background-image:url('/images/image-h-2.jpg');")
     .bg-cover.z1
     .pa.z9.w.h
       .container

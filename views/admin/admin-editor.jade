@@ -1,27 +1,37 @@
+-var title = info.draft.title || '';
+-var desc = info.draft.desc || '';
+-var markdown = info.draft.markdown || '';
+-var type = info.draft.type || '';
+-var uri = info.draft.uri || '';
 h1.page-header 写博客
 .row.placeholders
   .col-md-6.col-xm-12
     h2 markdown编辑器
-    form.form-write(method="post" action="/admin/drafts" enctype="multipart/form-data")
+    form.form-write(method="post" action="/admin/drafts/#{info.uri}" enctype="multipart/form-data")
+      if info.option == 'create'
+        input(type="hidden" name="method" value="post")
+      else
+        input(type="hidden" name="method" value="put")
       .form-group
         label 标题
-        input.form-control(type="text" name="draft-title" placeholder="博客标题")
+        input.form-control(type="text" name="title" value="#{title}", placeholder="博客标题")
       .form-group
         label 博客描述
-        textarea.form-control(name="draft-desc" placeholder="在这里写博客的描述...")
+        textarea.form-control(name="desc" placeholder="在这里写博客的描述...", ) #{desc}
       .form-group
         label 正文
-        textarea.form-control(name="draft-markdown" placeholder="在这里写正文...")
+        textarea.form-control(name="markdown" placeholder="在这里写正文...") #{markdown}
       .form-group
         label 分类
-        input.form-control(type="text" name="draft-type" placeholder="博客分类")
+        input.form-control(type="text" name="type" value="#{type}" placeholder="博客分类")
       .form-group
         label 文件名称（作为uri使用）
-        input.form-control(type="text" name="draft-uri" placeholder="示例：my-first-blog")
+        input.form-control(type="text" name="uri" value="#{uri}" placeholder="示例：my-first-blog")
       .from-group
         label 图片
-        input.form-control(type="file" name="draft-img" accept="image/x-png,image/jpeg,image/bmp")
+        input.form-control(type="file" name="img" accept="image/x-png,image/jpeg,image/bmp")
       input.btn.btn-block.btn-primary.btn-large(type="submit" value="写好了")
+    a.btn.btn-block.btn-large(href="/admin/drafts/") 取消
   .col-md-6.col-xm-12
     h2 预览
     .preview

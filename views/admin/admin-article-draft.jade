@@ -1,0 +1,11 @@
+h1= draft.title
+p= draft.time
+p= draft.desc
+.markdown-body !{draft.html}
+form(method="post" action="/admin/blogs/#{draft.uri}/")
+  input(type="hidden" name="method" value="post")
+  input.form-control.btn.btn-block.btn-primary(type="submit" value="发布")
+a.btn.btn-block.btn-primary(href="/admin/editor/?option=edit&uri=#{draft.uri}") 修改
+form(method="post" action="/admin/drafts/#{draft.uri}/")
+  input(type="hidden" name="method" value="delete")
+  input.form-control.btn.btn-block.btn-danger(type="submit" value="删除")

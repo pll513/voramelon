@@ -4,29 +4,10 @@ table.table.table-striped
     th 标题
     th 最后修改时间
     th 分类
-    th 字数
   tbody
-    tr
-      td
-        a 博客一巴拉巴拉
-      td 2016/11/3 14:58
-      td 日剧
-      td 789
-    tr
-      td
-        a 博客二巴拉巴拉巴拉巴拉
-      td 2016/9/12 14:58
-      td 日剧
-      td 789
-    tr
-      td
-        a 博客三哈哈
-      td 2016/11/30 14:58
-      td 日剧
-      td 789
-    tr
-      td
-        a 博客四爸爸爸爸爸爸啦啦啦啦啦爸爸爸爸爸爸
-      td 2016/11/23 14:58
-      td 日剧
-      td 789
+    - each draft in draftArr
+      tr
+        td
+          a(href="/admin/drafts/#{draft.uri}")= draft.title
+        td= draft.time
+        td= draft.type
