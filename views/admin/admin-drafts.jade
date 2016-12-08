@@ -5,7 +5,7 @@ table.table.table-striped
     th 最后修改时间
     th 分类
   tbody
-    - each draft in draftArr
+    each draft in draftArr
       tr
         td
           a(href="/admin/drafts/#{draft.uri}")= draft.title

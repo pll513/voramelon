@@ -5,7 +5,7 @@ var express = require('express'),
   admin = require('./routes/admin'),
   config = require('./config'),
   mongoUrl = config.mongodb.url,
-  timetoString = require('./utils/time_to_string'),
+  timeToString = require('./utils/time_to_string'),
   pool,
   server,
   app,
@@ -61,7 +61,32 @@ app.use('/admin', admin);
 
 
 app.get('/', function (req, res) {
-  res.render('index.jade');
+  
+  MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
+    
+    db.collection('recommended', function (err, col) {
+      
+      col.find({}, {
+        '_id': 0,
+        'uri': 1,
+        'title': 1,
+        'img': 1
+      }, function (err, result) {
+        
+        result.toArray(function (err, result) {
+          
+          var recommendedArr = result || [];
+          
+          res.render('index', {recommendedArr: recommendedArr});
+          
+        });
+        
+      });
+      
+    });
+    
+  });
+  
 });
 app.get(/^\/blogs\/([\w-]+)\/?$/, function (req, res) {
   
@@ -78,19 +103,70 @@ app.get(/^\/blogs\/([\w-]+)\/?$/, function (req, res) {
           return res.render('error');
         }
         
-        result.time = timetoString(new Date(result.time));
+        result.time = timeToString(new Date(result.time));
         
         db.close(true);
         res.render('article.jade', {blog: result});
         
       });
       
-    })
+    });
     
   });
   
 });
 
 
+app.get('/blogs/', function (req, res) {
+  
+  var type = req.query.type,
+    pageSize = 8,
+    page = parseInt(req.query.page, 10),
+    limit = (page + 1) * pageSize;
+  
+  if (req.xhr) {
+    
+    MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
+      
+      db.collection('blogs', function (err, col) {
+        
+        col.find({type: type}, {
+          '_id': 0,
+          'uri': 1,
+          'title': 1,
+          'time': 1,
+          'img': 1,
+          'readCnt': 1,
+          'commentCnt': 1,
+          'likeCnt': 1
+        }).limit(limit).toArray(function (err, result) {
+          
+          var list = [],
+            start = page * pageSize,
+            len,
+            i;
+          console.log(result);
+  
+          db.close(true);
+          for (i = start, len = result.length; i < len; ++i) {
+            list.push(result[i]);
+          }
+          res.json(list);
+          
+        });
+        
+      });
+      
+    });
+    
+  } else {
+    
+    res.redirect('/');
+    
+  }
+  
+});
 
-var server = app.listen(3000, function () {});
+
+var server = app.listen(3000, function () {
+});

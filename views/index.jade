@@ -32,42 +32,47 @@ body
               .x-12
                 .more-wrap
                   button.btn.mauto 了解更多
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-1.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-2.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-3.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-4.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-5.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-6.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲金蝶哦冬季减肥哦日妇科哦
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-7.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
-        .l-3.m-4.s-6.x-12
-          a.item-rect.bg-img(style="background-image:url('images/image-h-8.jpg');")
-            .bg-cover
-            h4.item-rect_title 标题放假就哦家啊的来讲
+        each item in recommendedArr
+          .l-3.m-4.s-6.x-12
+            a.item-rect.bg-img(style="background-image:url(#{item.img});")
+              .bg-cover
+              h4.item-rect_title #{item.title}
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-1.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-2.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-3.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-4.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-5.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-6.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲金蝶哦冬季减肥哦日妇科哦
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-7.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
+        //.l-3.m-4.s-6.x-12
+        //  a.item-rect.bg-img(style="background-image:url('images/image-h-8.jpg');")
+        //    .bg-cover
+        //    h4.item-rect_title 标题放假就哦家啊的来讲
   section#sec-category.sec-category.clearfix.pt2
     .container
       .row
-        .category-tag-list.mauto.clearfix
+        #category-tag-list.category-tag-list.mauto.clearfix
           a.category-tag 前端
           a.category-tag.curr 动漫
           a.category-tag 数学
@@ -87,7 +92,7 @@ body
     .container
       .row
         .l-offset-0.l-12.m-offset-0.m-12.s-offset-0.s-12.x-offset-0.x-12
-          ul.blog-item-list.mauto.clearfix
+          ul#blog-item-list.blog-item-list.mauto.clearfix
             li.list-item
               .list-item_left
                 a.list-item_img-wrap
@@ -196,17 +201,17 @@ body
                   img.list-item_img(src="images/image-h-15.jpg")
               .list-item_right-wrap
                 .list-item_right
-                p.list-item_top
-                  a.list-item_author 峰回路转
-                  span.list-item_time 2016-11-11
-                h4.list-item_title
-                  a 标题间谍啊叫哦的叫姐夫儿科额耳朵
-                p.list-item_bottom
-                  span.list-item_read 阅读 129
-                  span.list-item_pipe |
-                  span.list-item_comment 评论 12
-                  span.list-item_pipe |
-                  span.list-item_like 喜欢 66
+                  p.list-item_top
+                    a.list-item_author 峰回路转
+                    span.list-item_time 2016-11-11
+                  h4.list-item_title
+                    a 标题间谍啊叫哦的叫姐夫儿科额耳朵
+                  p.list-item_bottom
+                    span.list-item_read 阅读 129
+                    span.list-item_pipe |
+                    span.list-item_comment 评论 12
+                    span.list-item_pipe |
+                    span.list-item_like 喜欢 66
           .tc.mt4
             a.link 展开更多
         //.l-4.m-5.blog-right

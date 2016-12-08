@@ -80,7 +80,7 @@ router.get('/drafts/', function (req, res) {
       'type': 1
     }).toArray(function (err, result) {
       
-      var draftArr = result ? result : [];
+      var draftArr = result || [];
       
       db.close();
       
@@ -104,10 +104,10 @@ router.get('/blogs/', function (req, res) {
       'uri': 1,
       'time': 1,
       'title': 1,
-      'type': 1,
+      'type': 1
     }).toArray(function (err, result) {
       
-      var blogArr = result ? result : [];
+      var blogArr = result || [];
       
       db.close();
       
@@ -182,6 +182,73 @@ router.get('/editor/', function (req, res) {
   }
   
 });
+
+
+router.get('/recommended/', function (req, res) {
+  
+  MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
+    
+    db.collection('recommended', function (err, col) {
+      
+      col.find({}, {
+        '_id': 0,
+        'uri': 1,
+        'time': 1,
+        'title': 1,
+        'type': 1
+      }, function (err, result) {
+        
+        result.toArray(function (err, result) {
+          
+          var blogArr = result || [];
+  
+          console.log(blogArr);
+          
+          res.render('admin/recommended', {blogArr: blogArr});
+          
+        });
+        
+      });
+      
+    });
+    
+  });
+  
+});
+
+router.post('/recommended/', function (req, res) {
+  
+  var uri = req.body.uri;
+  
+  MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
+    
+    db.collection('blogs', function (err, col) {
+      
+      col.findOne({uri: uri}, {'_id': 0}, function (err, result) {
+        
+        if (!result) {
+          db.close(true);
+          res.redirect('/admin/blogs/');
+        }
+        db.collection('recommended', function (err, col) {
+          
+          col.insertOne(result, function (err, result) {
+  
+            db.close(true);
+            res.redirect('/admin/recommended/');
+            
+          });
+          
+        });
+        
+      });
+      
+    });
+    
+  });
+  
+});
+
 
 router.get('/info/', function (req, res) {
   res.render('admin/info');
@@ -281,7 +348,7 @@ router.post(/^\/drafts\/([\w-]+)\/?[?&=]*$/, function (req, res) {
         db.collection('drafts').updateOne({uri: uri}, {$set: draft}, function (err, result) {
           
           assert.equal(null, err);
-          db.close();
+          db.close(true);
           res.redirect('/admin/drafts');
           
         });
@@ -294,7 +361,7 @@ router.post(/^\/drafts\/([\w-]+)\/?[?&=]*$/, function (req, res) {
         db.collection('drafts').deleteOne({uri: uri}, function (err, result) {
           
           assert.equal(null, err);
-          db.close();
+          db.close(true);
           res.redirect('/admin/drafts');
           
         });
@@ -302,6 +369,39 @@ router.post(/^\/drafts\/([\w-]+)\/?[?&=]*$/, function (req, res) {
       });
       
     }
+    
+  });
+  
+});
+
+router.put(/^\/recommended\/([\w-]+)\/?[?&=]*$/, function (req, res) {
+  
+  var uri = req.params[0];
+  
+  MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
+    
+    db.collection('blogs', function (err, col) {
+      
+      col.findOne({uri: uri}, {'_id': 0}, function (err, result) {
+        
+        if (!result) {
+          db.close(true);
+          res.redirect('/admin/blogs/');
+        }
+        db.collection('recommend', function (err, col) {
+          
+          col.insertOne(result, function (err, result) {
+            
+            res.redirect('/admin/recommended/');
+            db.close(true);
+            
+          });
+          
+        });
+        
+      });
+      
+    });
     
   });
   
@@ -344,7 +444,7 @@ router.post(/^\/blogs\/([\w-]+)\/?[?&=]*$/, function (req, res) {
             });
             
           } else {
-  
+            
             blog.uri = uri;
             blog.readCnt = 0;
             blog.likeCnt = 0;
@@ -382,7 +482,7 @@ router.post(/^\/blogs\/([\w-]+)\/?[?&=]*$/, function (req, res) {
     MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
       db.collection('blogs').updateOne({uri: uri}, {$set: blog}, {upsert: true}, function (err, result) {
         res.redirect('/admin/blogs');
-        db.close();
+        db.close(true);
       });
     });
     
@@ -391,7 +491,7 @@ router.post(/^\/blogs\/([\w-]+)\/?[?&=]*$/, function (req, res) {
     MongoClient.connect(mongoUrl, {server: {poolSize: 1}}, function (err, db) {
       db.collection('blogs').deleteOne({uri: uri}, function (err, result) {
         res.redirect('/admin/blogs');
-        db.close();
+        db.close(true);
       });
     });
     
@@ -417,7 +517,7 @@ router.put(/^\/blogs\/([\w-]+)\/?[?&=]*$/, function (req, res) {
       result.uri = uri;
       db.collection('blogs').updateOne(result, {upsert: true}, function (err, result) {
         assert.equal(null, err);
-        db.close();
+        db.close(true);
         res.render('admin/blogs');
       });
     });
@@ -451,7 +551,7 @@ router.delete(/^\/drafts\/([\w-]+)\/?[?&=]*$/, function (req, res) {
       if (err) {
         console.log(err);
         db.close(true);
-        return res.send({success:false});
+        return res.send({success: false});
       }
       
       db.close(true);

@@ -4,6 +4,9 @@ p= blog.type
 p= blog.desc
 .markdown-body !{blog.html}
 //a.btn.btn-block.btn-primary(href="/admin/editor/?option=edit?uri=#{blog.uri}/") 再次编辑
+form(method="post" action="/admin/recommended/")
+  input(type="hidden" name="uri" value="#{blog.uri}")
+  input.form-control.btn.btn-block.btn-warning(type="submit" value="加入推荐")
 form(method="post" action="/admin/blogs/#{blog.uri}/")
   input(type="hidden" name="method" value="delete")
   input.form-control.btn.btn-block.btn-danger(type="submit" value="删除博客")

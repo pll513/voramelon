@@ -1,11 +1,11 @@
-h1 已发布
+h1 推荐
 table.table.table-striped
   thead
     th 标题
     th 最后修改时间
     th 分类
   tbody
-    each blog in blogArr
+    - each blog in blogArr
       tr
         td
           a(href="/admin/blogs/#{blog.uri}/")= blog.title
